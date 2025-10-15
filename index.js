@@ -6,7 +6,7 @@ app.use(express.json());
 
 // ⚠️ Dummy token for testing
 const TOKEN = "7800991220:AAGoyfLKbo9lJ6iEdPqrl-NUqieh2vuQiEY";
-const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`;
+const TELEGRAM_API = https://api.telegram.org/bot7800991220:AAGoyfLKbo9lJ6iEdPqrl-NUqieh2vuQiEY/setWebhook?url=https://hello-kappa-ecru.vercel.app/webhook
 
 app.post("/webhook", async (req, res) => {
   const message = req.body?.message;
