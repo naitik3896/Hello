@@ -4,9 +4,9 @@ import axios from "axios";
 const app = express();
 app.use(express.json());
 
-// ⚠️ Dummy token for testing
+// 🔹 Dummy token for simplicity (replace later with real token)
 const TOKEN = "7800991220:AAGoyfLKbo9lJ6iEdPqrl-NUqieh2vuQiEY";
-const TELEGRAM_API = https://api.telegram.org/bot7800991220:AAGoyfLKbo9lJ6iEdPqrl-NUqieh2vuQiEY/setWebhook?url=https://hello-kappa-ecru.vercel.app/webhook
+const TELEGRAM_API = `https://api.telegram.org/bot${TOKEN}`;
 
 app.post("/webhook", async (req, res) => {
   const message = req.body?.message;
@@ -30,6 +30,7 @@ app.post("/webhook", async (req, res) => {
   return res.sendStatus(200);
 });
 
+// Test route to check if bot is running
 app.get("/", (req, res) => {
   res.send("✅ Telegram bot is running on Vercel!");
 });
